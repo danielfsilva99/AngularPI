@@ -1,0 +1,37 @@
+<!-- app.component.html -->
+<div>
+    <label for="numeroAngular">Ingrese el número del cliente:</label>
+    <input type="number" id="numeroAngular" [(ngModel)]="numeroAngular">
+    <button (click)="onIngresarNumeroAngular()">Aceptar</button>
+  </div>
+  <div>
+    <h2>Cliente</h2>
+    <p>
+      Nombre: {{data1.nombre}} {{data1.apellido}}
+    </p>
+    <p>
+      Cuenta: {{data1.correo}}
+    </p>
+  </div>
+  
+  
+  <div>
+    <h2> Lista de consumos</h2>
+    <ul>
+      <li *ngFor="let item of data3">
+        {{item.detalle}} - {{item.fecha_compra | date:'yyyy-MM-dd'}}
+      </li>
+    </ul>
+  </div>
+<div>
+  <label for="choices">Selecciona una opción:</label>
+  <select id="choices" [(ngModel)]="selectedOption" (change)="onSelect()">
+    <option *ngFor="let option of data2" [value]="option.nombre_empresa">{{ option.nombre_empresa }} - {{ option.descripcion_Servicio }}</option>
+  </select>
+
+  <div *ngIf="selectedOption" class="selected-option">
+    Opción seleccionada: {{ selectedOption }}
+  </div>
+</div>
+
+  
