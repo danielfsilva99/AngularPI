@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'boldFont';
+    src: url('../../assets/fonts/bold.ttf') format('truetype');
+  }
+  
+  body, h1,h2 {
+    font-family: 'boldFont', sans-serif;
+  }
+
+  p, a, span, input, button, label, li, ul, input, div {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+
+  .LogoImg img{
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 140px;
+  }
+.screenContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+.clipPathCircle{
+    position: fixed;
+    background-color: #032030;
+    width: 50%;
+    height: 100vh;
+    clip-path: circle(66.1% at 0 49%);
+}
+.boxContainer{
+    margin-left: 40%;
+}
+
+.SearchClientContainer{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-top: 35%;
+    margin-left: 10%;
+}
+.SearchClientContainer h1{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.buttonPrimary{
+    background-color: #006DA5;
+    color: #e5e7eb;
+    border: none;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 50%;
+    margin-left: 24%;
+    margin-top: 2rem;  
+}
+
+.profileContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.profileContainer img{
+    width: 110px;
+    height: 100px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+
+.selectContainer{
+    margin-top: 50px;
+}
+.buttonPrimary:hover{
+    background-color: #006495;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+/*it is not a button*/
+.selected-option{
+    /*it is not a button*/
+    background-color: #006DA5;
+    color: #e5e7eb;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    margin-top: 20px;
+    width: 47%;
+}
+
+select{
+    margin-left: 20px;
+    border-radius: 25px;
+    width: 47%;
+}
+/* Estilos para la tabla y filas */
+.custom-table {
+    width: 700px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table-row:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo alternativo para las filas */
+  }
+  
+  .table-row:hover {
+    
+    background-color: rgba(56, 64, 73, 0.449); /* Color al hacer hover en la fila */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilos para el encabezado de la tabla */
+  .custom-thead {
+    background-color: #006DA5;
+    color: white;
+  }
+  
+  .custom-thead th {
+    padding: 10px;
+  }
+  
+  /* Estilos para las celdas */
+  .custom-table td, .custom-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-table td:hover {
+    background-color: rgba(56, 64, 73, 0.449); 
+  }
+  
+  .custom-table th:hover{
+    background-color: #006495;
+    color: white;
+  }
+
+
+
+  .ilustrationImg{
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+  }

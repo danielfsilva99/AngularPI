@@ -1,37 +1,65 @@
 <!-- app.component.html -->
-<div>
-    <label for="numeroAngular">Ingrese el número del cliente:</label>
-    <input type="number" id="numeroAngular" [(ngModel)]="numeroAngular">
-    <button (click)="onIngresarNumeroAngular()">Aceptar</button>
+<div class="screenContainer">
+  <div class="clipPathCircle">
+    <div class="LogoImg">
+      <img src="../../assets/img/logoBank.png" alt="">
+    </div>
+    <div class="SearchClientContainer">
+      <h1 for="numeroAngular">Ingrese el número del cliente:</h1>
+      <input type="number" id="numeroAngular" [(ngModel)]="numeroAngular">
+      <button class="buttonPrimary" (click)="onIngresarNumeroAngular()">Aceptar</button>
+    </div>
   </div>
-  <div>
-    <h2>Cliente</h2>
-    <p>
-      Nombre: {{data1.nombre}} {{data1.apellido}}
-    </p>
-    <p>
-      Cuenta: {{data1.correo}}
-    </p>
-  </div>
-  
-  
-  <div>
-    <h2> Lista de consumos</h2>
-    <ul>
-      <li *ngFor="let item of data3">
-        {{item.detalle}} - {{item.fecha_compra | date:'yyyy-MM-dd'}}
-      </li>
-    </ul>
-  </div>
-<div>
-  <label for="choices">Selecciona una opción:</label>
-  <select id="choices" [(ngModel)]="selectedOption" (change)="onSelect()">
-    <option *ngFor="let option of data2" [value]="option.nombre_empresa">{{ option.nombre_empresa }} - {{ option.descripcion_Servicio }}</option>
-  </select>
+  <div class="boxContainer">
+    <div class="profileContainer">
+      <div>
+        <h2>Cliente</h2>
+        <p>
+          Nombre: {{data1.nombre}} {{data1.apellido}}
+        </p>
+        <p>
+          Cuenta: {{data1.correo}}
+        </p>
+      </div>
+      <div>
+        <img src="../../assets/img/profile.png" alt="">
+      </div>
+    </div>
 
-  <div *ngIf="selectedOption" class="selected-option">
-    Opción seleccionada: {{ selectedOption }}
+
+
+    <div>
+      <h2> Lista de consumos</h2>
+      <table class="custom-table">
+        <thead class="custom-thead">
+          <tr>
+            <th>Detalle</th>
+            <th>Fecha de Compra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data3" class="table-row">
+            <td>{{ item.detalle }}</td>
+            <td>{{ item.fecha_compra | date:'yyyy-MM-dd' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="selectContainer">
+      <div>
+        <label for="choices">Selecciona una opción:</label>
+        <select id="choices" [(ngModel)]="selectedOption" (change)="onSelect()">
+          <option *ngFor="let option of data2" [value]="option.nombre_empresa">{{ option.nombre_empresa }} - {{
+            option.descripcion_Servicio }}</option>
+        </select>
+      </div>
+      <div *ngIf="selectedOption" class="selected-option">
+        Opción seleccionada: {{ selectedOption }}
+      </div>
+    </div>
+
+    <img class="ilustrationImg" src="../../assets/img/ilustration.png" alt="">
   </div>
+
+
 </div>
-
-  
